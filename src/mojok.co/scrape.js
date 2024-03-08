@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 
-class MojokScrapper {
+export default class MojokScrapper {
   async scrapeSections(jenis_halam, jml_hal) {
     const mojokSection = [
       "esai",
@@ -37,5 +37,3 @@ class MojokScrapper {
     return allNews;
   }
 }
-
-export default MojokScrapper;

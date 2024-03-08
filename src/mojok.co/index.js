@@ -1,6 +1,4 @@
-import MojokScrapper from "./mojok.co/scrape";
+import MojokScrapper from "./scrape.js"
 
 
-export default {
-    MojokScrapper
-};
+export default MojokScrapper;
