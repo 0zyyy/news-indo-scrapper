@@ -1,4 +1,4 @@
-import MojokScrapper from "./scrape";
+import MojokScrapper from "./mojok.co/scrape";
 
 
 export default {
