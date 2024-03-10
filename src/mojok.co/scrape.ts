@@ -24,7 +24,7 @@ export default class MojokScrapper {
     );
     const $ = cheerio.load(response.data);
     const posts = $(".jeg_postblock").find(".jeg_post");
-    posts.each((index, element) => {
+    posts.each((_, element) => {
         const uhuys = $(element).find(".jeg_post_title");
         const author = $(element).find(".jeg_meta_author");
         allNews.push({

@@ -11,6 +11,7 @@ type Article = {
   publish_date: string;
   article_url: string;
 };
+
 export default class DetikScrapper {
   async getUrl(
     query: any,
