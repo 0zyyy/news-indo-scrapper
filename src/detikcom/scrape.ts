@@ -113,10 +113,6 @@ export default class DetikScrapper {
                            'Selengkapnya di halaman selanjutnya.',
                            'Ayo share cerita pengalaman dan upload photo album travelingmu di sini.Silakan Daftar atau Masuk'].includes(text);
             }));
-            
-            console.log("____");
-            console.log(ng);
-            console.log("____")
         }
         return {
             title: title.trim(),

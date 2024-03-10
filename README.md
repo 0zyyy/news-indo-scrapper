@@ -1,7 +1,5 @@
 # News Indo Scrapper
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/0zyyy/news-indo-scrapper/blob/main/LICENSE)
-
 ## Description
 
 News Indo Scrapper is a package that allows you to scrape news articles from Indonesian news websites. It provides a simple and convenient way to extract relevant information from news articles, such as the title, author, date, and content.
