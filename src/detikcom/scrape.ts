@@ -1,6 +1,5 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import * as CONST from "./const";
 
 type Article = {
   title: string;
@@ -23,7 +22,6 @@ export default class DetikScrapper {
     try {
       const url = `https://www.detik.com/search/searchall?query=${query}&siteid=${category_id}&sortby=time&fromdatex=${date_start}&todatex=${date_end}&page=${pages_num}`;
       const resp = await axios.get(url);
-      console.log(resp.data);
       return cheerio.load(resp.data);
     } catch (e) {
       throw new Error("Failed to fetch the url");
@@ -82,7 +80,6 @@ export default class DetikScrapper {
         const category = page(header).find("span.detail__label").text();
         const date = page(header).find("div.detail__date").text();
         if(multiple_page.length > 0){
-            console.log("Multiple")
             let pageLinks = multiple_page.find('a').map((_, element) => {
                 return page(element).attr('href');
             }).get().slice(0, -1);
@@ -130,5 +127,4 @@ export default class DetikScrapper {
   }
 }
 
-const ng = new DetikScrapper();
-ng.getContentArticle("https://news.detik.com/berita/d-7231768/bareskrim-periksa-rosan-soal-dugaan-pencemaran-nama-baik-oleh-connie-bakrie").then((resp) => console.log(resp?.content));
+
